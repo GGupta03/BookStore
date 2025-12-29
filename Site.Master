@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="BookStore.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en" runat="server">
+<head runat="server">
+    <title>BookStore</title>
+</head>
+<body>
+
+<form runat="server">
+
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+    <div style="margin:10px;">
+        <asp:Button
+            ID="btnLogout"
+            runat="server"
+            Text="Logout"
+            OnClick="Logout_Click" />
+    </div>
+
+    <div style="margin:10px;">
+        <a href="~/Pages/Books.aspx" runat="server">Books</a> |
+        <a href="~/Pages/Cart.aspx" runat="server">Cart</a> |
+        <a href="~/Pages/Wishlist.aspx" runat="server">Wishlist</a> |
+        <a href="~/Pages/Orders.aspx" runat="server">Orders</a>
+    </div>
+
+    <div style="margin:10px;">
+        <asp:Button
+            ID="btnPrevious"
+            runat="server"
+            Text="Previous"
+            OnClick="Previous_Click" />
+
+        <asp:Button
+            ID="btnNext"
+            runat="server"
+            Text="Next"
+            OnClick="Next_Click" />
+    </div>
+
+    <hr />
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+</form>
+
+</body>
+</html>
